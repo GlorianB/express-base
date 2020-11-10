@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/styles/main.css")
+        title Erreur 404
+    body
+        include includes/header.pug
+        h1 Page not found !
+        h2= erreurAffichable
+        ul
+            each nombre in listeDeNombre
+                li= nombre
+        if informationSecrete
+            p Votre mot de passe est caché
+        else
+            p Votre mot de passe est ******

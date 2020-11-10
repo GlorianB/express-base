@@ -1,0 +1,4 @@
+npm install .
+aller dans le dossier core
+node setup.js
+npm start depuis la racine du projet
