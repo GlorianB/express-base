@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const userRoutes = require('./routes/users');
 const adminRoutes = require('./routes/admin');
-
+const githubRoutes = require('./routes/github');
 
 const app = express();
 
@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', userRoutes);
 app.use('/create-users', adminRoutes);
+app.use('/repos', githubRoutes);
 
 app.use('/', (request, response, next) => {
     console.log('home');
